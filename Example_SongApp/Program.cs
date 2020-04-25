@@ -4,6 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// **************************************************
+//
+// Title: Song App
+// Description: Example code of using the beep method to play a simple song
+// Application Type: Console
+// Author: Velis, John
+// Dated Created: 4/25/2020
+// Last Modified: 
+//
+// **************************************************
 namespace Example_SongApp
 {
 
@@ -42,9 +52,10 @@ namespace Example_SongApp
         /// <summary>
         /// play a song with a given octave and tempo
         /// </summary>
-        /// <param name="song"></param>
-        /// <param name="octave"></param>
-        static void PlaySong(List<SongNote> song, Dictionary<NoteName, int> octave, int tempoMulitplyer)
+        /// <param name="song">list of notes for a song</param>
+        /// <param name="octave">dictionary of notes and frequencies</param>
+        /// <param name="tempoMultiplayer">song tempo as a multiplier</param>
+        static void PlaySong(List<SongNote> song, Dictionary<NoteName, int> octave, int tempoMulitplier)
         {
             int noteFrequency;
             int noteLength;
@@ -52,7 +63,7 @@ namespace Example_SongApp
             foreach (SongNote songNote in song)
             {
                 noteFrequency = octave[songNote.Name];
-                noteLength = (int)songNote.Length * tempoMulitplyer;
+                noteLength = (int)songNote.Length * tempoMulitplier;
 
                 Console.Beep(noteFrequency, noteLength);
             }
@@ -61,7 +72,7 @@ namespace Example_SongApp
         /// <summary>
         /// initialize octave 4 dictionary with note frequencies
         /// </summary>
-        /// <param name="octave4"></param>
+        /// <param name="octave4">dictionary of frequencies for octave 4</param>
         static void InitializeOctave4(Dictionary<NoteName, int> octave4)
         {
             octave4.Add(NoteName.C, 261);
