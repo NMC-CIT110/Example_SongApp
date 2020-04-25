@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Example_SongApp
+﻿namespace Example_SongApp
 {
     /// <summary>
     /// simple class to hold the name and length of a note used in a song
